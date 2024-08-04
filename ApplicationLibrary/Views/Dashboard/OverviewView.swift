@@ -99,7 +99,7 @@ public struct OverviewView: View {
     }
 
     private nonisolated func serviceReload() async throws {
-        try LibboxNewStandaloneCommandClient()?.serviceReload()
+        try LibboxNewStandaloneCommandClient()!.serviceReload()
     }
 
     private nonisolated func setSystemProxyEnabled(_ isEnabled: Bool) async {

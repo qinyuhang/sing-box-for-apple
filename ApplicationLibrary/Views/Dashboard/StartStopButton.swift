@@ -80,7 +80,7 @@ public struct StartStopButton: View {
                     try await profile.start()
                     await environments.logClient.connect()
                 } else {
-                    await profile.stop()
+                    try await profile.stop()
                 }
             } catch {
                 await MainActor.run {
